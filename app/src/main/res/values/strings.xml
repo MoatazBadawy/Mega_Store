@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mega Store</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_chat">Chat</string>
+    <string name="menu_fav">favourite</string>
+    <string name="menu_account">account</string>
+</resources>

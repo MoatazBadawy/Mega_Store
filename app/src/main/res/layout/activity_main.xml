@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_background_shape"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:src="@drawable/ic_menu" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:src="@drawable/ic_search" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menu"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:text="Mega Pattern Store"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/under_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_alignStart="@+id/title"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="Find out your favorite pattern"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/image_one"
+            android:layout_width="@dimen/_135sdp"
+            android:layout_height="@dimen/_190sdp"
+            android:layout_below="@+id/under_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_23sdp"
+            android:background="@drawable/rounded_image_one_shape" />
+
+        <ImageView
+            android:id="@+id/image_two"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_alignTop="@+id/image_one"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_toEndOf="@+id/image_one"
+            android:background="@drawable/rounded_image_two_shape" />
+
+        <ImageView
+            android:id="@+id/image_three"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_below="@+id/image_two"
+            android:layout_alignEnd="@+id/image_two"
+            android:layout_alignBottom="@+id/image_one"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_toEndOf="@+id/image_one"
+            android:background="@drawable/rounded_image_three_shape" />
+
+        <ImageView
+            android:id="@+id/image_four"
+            android:layout_width="match_parent"
+            android:layout_height="286dp"
+            android:layout_below="@+id/image_one"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/rounded_image_four_shape" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/color_transparen"
+        android:paddingTop="2dp"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@color/bnv_tab_item_foreground"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
